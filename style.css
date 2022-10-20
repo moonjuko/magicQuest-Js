@@ -1,0 +1,36 @@
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html,body {
+  background: linear-gradient(120deg);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;}
+
+  h1 {
+    margin: 0.5em auto;
+    color: #FFF;
+    text-align: center;
+  }
+
+
+.chatbox {
+  background: rgba(255, 255, 255, 0.05);
+  width: 600px;
+  height: 75%;
+  border-radius: 0.2em;
+  position: relative;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+
+}
