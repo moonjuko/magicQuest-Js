@@ -5,10 +5,6 @@ export function getRandomInt(min, max) {
   return Math.floor(min + Math.random() * (max - min + 1));
 }
 
-// change to test commit
-// test push
-let blabla = "test variable"
-
 let canvas = document.getElementById("gameScreen"); //Association with HTML file
 let ctx = canvas.getContext("2d"); //Turn on the depiction function with the getContext method
 

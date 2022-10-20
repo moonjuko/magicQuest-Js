@@ -1,66 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class='container' ng-cloak ng-app="chatApp">
-    <h1>Swanky Chatbox UI With Angular</h1>
-    <div class='chatbox' ng-controller="MessageCtrl as chatMessage">
-      <div class='chatbox__user-list'>
-        <h1>User list</h1>
-        <div class='chatbox__user--active'>
-          <p>Jack Thomson</p>
-        </div>
-        <div class='chatbox__user--busy'>
-          <p>Angelina Jolie</p>
-        </div>
-        <div class='chatbox__user--active'>
-          <p>George Clooney</p>
-        </div>
-        <div class='chatbox__user--active'>
-          <p>Seth Rogen</p>
-        </div>
-        <div class='chatbox__user--away'>
-          <p>John Lydon</p>
-        </div>
-      </div>
-      <div class="chatbox__messages" ng-repeat="message in messages">
-        <div class="chatbox__messages__user-message">
-          <div class="chatbox__messages__user-message--ind-message">
-            <p class="name">{{message.Name}}</p>
-            <br/>
-            <p class="message">{{message.Message}}</p>
-          </div>
-        </div>
-      </div>
-      <form>
-        <input type="text" placeholder="Enter your message">
-      </form>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magic Quest</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="startMenu">
+      <img class="blurryBG" src="./assets/startScreen.png" alt="start screen" />
+      <button class="buttonStyle" id="startButton"><p>START GAME</p></button>
+      <img
+        class="witch"
+        src="./assets/witch.gif"
+        alt="witch gif"
+        width="400px"
+        height="400px"
+      />
     </div>
 
-    <script>
-      (function() {
-  var app = angular.module('chatApp', []);
+    <div class="wrapper">
+      <canvas id="gameScreen" width="826" height="450"></canvas>
+      <p id="scoreAppear"></p>
+      <h1 id="title">SCORE 15 POINTS TO GET THE POTION</h1>
+      <h1 id="direction">PRESS ↑ TO MOVE PLAYER</h1>
+    </div>
 
-  app.controller('MessageCtrl', function($scope) {
-    $scope.messages = [{
-      Name: 'George Clooney',
-      Message: "The only failure is not to try"
-    }, {
-      Name: 'Seth Rogen',
-      Message: "I grew up in Vancouver, man. That's where more than half of my style comes from."
-    }, {
-      Name: 'John Lydon',
-      Message: "There's nothing glorious in dying. Anyone can do it."
-    }];
-  });
+    <div class="endMenu">
+      <img class="blurryBG" src="./assets/BG.png" alt="background lost" />
+      <button class="buttonStyle" id="restartButton"><p>PLAY AGAIN</p></button>
+      <img class="gameOver" src="./assets/gameOver.png" alt="title" />
+      <img
+        class="heart"
+        src="./assets/heart.gif"
+        alt="broken heart"
+        width="280px"
+        height="280px"
+      />
+    </div>
 
-})();
-    </script>
-</body>
+    <div class="winMenu">
+      <img class="blurryBG" src="./assets/BG.png" alt="background win" />
+      <button class="buttonStyle" id="winButton"><p>PLAY AGAIN</p></button>
+      <img
+        class="youWin"
+        src="./assets/youWin.png"
+        alt="you win"
+        width="500px"
+        height="60px"
+      />
+      <img
+        class="potion"
+        src="./assets/potion.gif"
+        alt="potion"
+        width="180px"
+        height="200px"
+      />
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
